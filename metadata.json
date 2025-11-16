@@ -1,0 +1,5 @@
+{
+  "name": "Kids Content Creator Studio",
+  "description": "An all-in-one tool to generate stories, images, animations, and voice-overs for kids' YouTube channels using Gemini AI. Create engaging content with text-to-speech, image generation, and video animation from prompts or images.",
+  "requestFramePermissions": []
+}
