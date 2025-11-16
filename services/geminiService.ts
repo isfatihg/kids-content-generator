@@ -1,4 +1,4 @@
-import { GoogleGenAI, Modality, Type, Operation } from "@google/genai";
+import { GoogleGenAI, Modality, Type, Operation, GenerateVideosResponse } from "@google/genai";
 import { AspectRatio } from '../types';
 
 // AUDIO DECODING HELPERS for TTS
@@ -114,7 +114,8 @@ export const generateImage = async (prompt: string, characterDescription?: strin
 
 const pollVideoOperation = async (
     // FIX: Replaced VideosOperationResponse with Operation and removed apiKey
-    operation: Operation,
+    // FIX: Correctly typed the Operation generic for video generation.
+    operation: Operation<GenerateVideosResponse>,
     setProgress: (message: string) => void
 ): Promise<string> => {
     let currentOperation = operation;

@@ -154,8 +154,8 @@ const IllustrationGenerator: React.FC<{ storyPrompt: string }> = ({ storyPrompt 
                     const imageUrl = await generateImage(imagePrompts[i], characterDescription);
                     setImageUrls(prevUrls => [...prevUrls, imageUrl]);
                     if (i < imagePrompts.length - 1) {
-                        setLoadingMessage(`Pausing to let the magic settle...`);
-                        await new Promise(resolve => setTimeout(resolve, 2000));
+                        setLoadingMessage(`Pausing for 15 seconds to avoid rate limits...`);
+                        await new Promise(resolve => setTimeout(resolve, 15000));
                     }
                 }
             } else {
